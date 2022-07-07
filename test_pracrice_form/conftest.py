@@ -1,5 +1,6 @@
 from selene.support.shared import browser
 import pytest
+browser.config.timeout = 2
 
 
 @pytest.fixture(scope="function", autouse=True)

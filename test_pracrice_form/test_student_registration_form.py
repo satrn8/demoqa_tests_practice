@@ -9,7 +9,7 @@ class Student:
     gender = "Female"
     mobile = "9998887788"
     date_of_birth = {"day": "14", "month": "06", "year": "2022"}
-    subjects = "math"
+    subjects = "Maths"
     hobbies = "Sports"
     picture = "test.jpeg"
     address = "Street"
@@ -25,6 +25,8 @@ def test_registration_form():
     browser.element('[for="gender-radio-2"]').click()
     browser.element("#userNumber").type(Student.mobile)
     browser.element("#dateOfBirthInput").type(Student.date_of_birth)
+    browser.element("#subjectsInput").type(Student.subjects).press_tab()
+    browser.element('[for="hobbies-checkbox-1"]').click()
 
 
 
