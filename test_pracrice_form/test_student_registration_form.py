@@ -1,6 +1,6 @@
 from selene import have, command
 from selene.support.shared import browser
-# from demoqa-tests-practice-form.controls.resourse import resourse
+from demoqa_tests_practice.utils import resource
 
 
 class Student:
@@ -9,7 +9,7 @@ class Student:
     email = "verypyc@gmail.com"
     gender = "Female"
     mobile = "9998887788"
-    date_of_birth = {"day": "14", "month": "06", "year": "2022"}
+    date_of_birth = {"day": "27", "month": "01", "year": "1992"}
     subjects = "Maths"
     hobbies = "Sports"
     picture = "test.jpeg"
@@ -31,4 +31,4 @@ def test_registration_form():
     browser.element('.react-datepicker__day--027').click()
     browser.element("#subjectsInput").type(Student.subjects).press_tab()
     browser.element('[for="hobbies-checkbox-2"]').click()
-    # browser.element('#uploadPicture').send_keys(resourse('test.jpeg'))
+    browser.element('#uploadPicture').send_keys(resource('pepe.png'))
