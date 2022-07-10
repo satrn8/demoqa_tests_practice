@@ -1,6 +1,6 @@
 from selene import have, command
 from selene.support.shared import browser
-from demoqa_tests_practice.utils import resource
+import os
 
 
 class Student:
@@ -31,4 +31,4 @@ def test_registration_form():
     browser.element('.react-datepicker__day--027').click()
     browser.element("#subjectsInput").type(Student.subjects).press_tab()
     browser.element('[for="hobbies-checkbox-2"]').click()
-    browser.element('#uploadPicture').send_keys(resource('pepe.png'))
+    browser.element('#uploadPicture').send_keys(os.path.abspath('../resource/pepe.png'))
