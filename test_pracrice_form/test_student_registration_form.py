@@ -1,21 +1,6 @@
-from selene import have, command
+from selene import have
 from selene.support.shared import browser
 import os
-
-
-class Student:
-    first_name = "Alyona"
-    last_name = "Tch"
-    email = "verypyc@gmail.com"
-    gender = "Female"
-    mobile = "9998889988"
-    date_of_birth = {"day": "27", "month": "01", "year": "1992"}
-    subjects = "Maths"
-    hobbies = "Sports"
-    picture = "pepe.png"
-    address = "Street"
-    state = "Uttar Pradesh"
-    city = "Merrut"
 
 
 def test_registration_form():
